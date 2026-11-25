@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marvel: Who Am I?</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">MARVEL</span>
+        <span>WHO AM I?</span>
+      </div>
+      <div class="stats">
+        <div><small>SCORE</small><strong id="score">0</strong></div>
+        <div><small>STREAK</small><strong id="streak">0</strong></div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">THE ULTIMATE CHARACTER CHALLENGE</p>
+      <h1>WHO'S THAT <span>HERO?</span></h1>
+      <p class="subtitle">Study the clues. Trust your comic-book knowledge. Make your guess.</p>
+    </section>
+
+    <section class="game-panel">
+      <div class="panel-head">
+        <div>
+          <span class="round-label">CHARACTER FILE</span>
+          <h2>Identify this character</h2>
+        </div>
+        <label class="difficulty-wrap">
+          DIFFICULTY
+          <select id="difficulty">
+            <option value="easy">Friendly neighborhood</option>
+            <option value="medium" selected>Superhero</option>
+            <option value="hard">Multiverse expert</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="game-layout">
+        <div class="portrait-wrap">
+          <div class="portrait" id="portrait">
+            <div class="mystery-symbol">?</div>
+            <img id="character-image" alt="Mystery character" hidden>
+            <div class="portrait-overlay" id="portrait-overlay">
+              IDENTITY CLASSIFIED
+            </div>
+          </div>
+          <p class="portrait-caption" id="portrait-caption">
+            Image reveals after your answer
+          </p>
+        </div>
+
+        <div class="clue-area">
+          <div class="clue-heading">
+            <span>INTEL BRIEFING</span>
+            <span id="clue-count">3 CLUES</span>
+          </div>
+
+          <div class="clues" id="hints"></div>
+
+          <button class="hint-button" id="reveal-hint">
+            REVEAL ANOTHER CLUE +
+          </button>
+
+          <div class="options" id="options"></div>
+        </div>
+      </div>
+
+      <div class="feedback" id="message">
+        Your mission starts now. Choose the correct character.
+      </div>
+
+      <div class="controls">
+        <button id="next-btn" class="primary-button" hidden>
+          NEXT CHARACTER →
+        </button>
+        <button id="restart-btn" class="text-button">
+          RESET GAME
+        </button>
+      </div>
+    </section>
+
+    <footer>
+      <span>UNOFFICIAL FAN-MADE TRIVIA PROJECT</span>
+      <span id="database-count">Loading character files...</span>
+    </footer>
+  </main>
+</body>
+</html>
